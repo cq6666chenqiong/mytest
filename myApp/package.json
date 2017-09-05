@@ -15,7 +15,7 @@
     "errorhandler": "~1.4.2",
     "express": "~4.13.1",
     "express-session": "latest",
-    "http": "*",
+    "http": "0.0.0",
     "mongoose": "~4.2.5",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"

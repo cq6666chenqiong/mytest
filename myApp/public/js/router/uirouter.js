@@ -4,17 +4,21 @@
         console.log("come in");
         $stateProvider
             .state('user', {
-                //abstract: 'true',
                 url: '/user',
                 controller:'MenuController',
-                templateUrl: '/view/menu.html'
+                templateUrl: '/view/menu.html',
+                params: {
+                    message: null
+                }
             })
             .state('user.main', {
                 url: '/main',
                 controller: 'MainController',
-                templateUrl: '/view/main.html'
+                templateUrl: '/view/main.html',
+                params: {
+                    users: null
+                }
                 /*
-                ,
                 resolve: {
                     'users': function (UserService) {
                         console.log("st  dddd");
@@ -22,6 +26,7 @@
                     }
                 }
                 */
+
             })
             .state('user.update', {
                 url: '/update',

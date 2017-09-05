@@ -3,7 +3,7 @@
     app.factory('loginService', function ($http, $q) {
         return {
             userLogin: function (user) {
-                var url = "http://localhost:3000/pub/login?name="+user.name + "&password="+user.password;
+                var url = "http://192.168.5.121:3000/pub/login?name="+user.name + "&password="+user.password;
                 var deferred = $q.defer();
                 $http.get(url).then(
                     function success(respData) {

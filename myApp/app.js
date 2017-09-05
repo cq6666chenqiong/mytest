@@ -17,19 +17,19 @@ app.set('view engine', 'html');
 // rewrite to load static resources
 app.use(express.static(__dirname + '/public'));
 // static views
+
+
+app.use('/pub', pubRouter);
+
+
+var myrouter = require('./routes/router');
+app.use('/api', myrouter);
+
+
 app.all('/*', function (req, res) {
     res.sendfile('index.html', {root: __dirname + '/public'});
 });
 
-app.use('/pub', pubRouter);
-
-app.use(function(req,resp,next){
-    console.log("bas==="+__dirname);
-    next();
-});
-
-var myrouter = require('./routes/router');
-app.use('/api', myrouter);
 module.exports = app;
 
 

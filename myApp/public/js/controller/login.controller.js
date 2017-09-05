@@ -3,19 +3,13 @@
     // loginService
     app.controller('LoginController', function ($scope, $rootScope, $state, $stateParams,SessionStorage,loginService) {
         $rootScope.title = "用户登陆";
-        //$scope.user = $stateParams.data;
-        /*
-        if (!$scope.user) {
-            console.log("a");
-            $scope.user = SessionStorage.get('user');
-        } else {
-            SessionStorage.save('user', $scope.user);
-        }
-        */
         $scope.login = function (user) {
-            alert(JSON.stringify(user));
-            loginService.userLogin(user);
-            $state.go('user');
+            var promise = loginService.userLogin(user);
+            promise.then(function(result){
+                $state.go('user',{
+                    message : result
+                });
+            })
         };
     });
 })(angular.module('app'));

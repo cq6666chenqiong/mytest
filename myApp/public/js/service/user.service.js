@@ -3,7 +3,7 @@
     app.factory('userService', function ($http, $q) {
         return {
             getAllUsers: function () {
-                var url = "http://localhost:3000/api/user/all";
+                var url = "http://192.168.5.121:3000/api/user/list";
                 var deferred = $q.defer();
                 $http.get(url).then(
                     function success(respData) {
