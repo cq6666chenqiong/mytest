@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8"/>
+    <base href='/'/>
+    <title ng-bind="title"></title>
+
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'/>
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'/>
+    <link rel='stylesheet' href='css/mystyle.css'/>
+
+</head>
+<body>
+用户界面1
+<div ui-view></div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+
+<script src="js/module.js"></script>
+<script src="js/session.storage.js"></script>
+
+<!--路径文件 -->
+<script src="js/router/uirouter.js"></script>
+<script src="js/router/login.router.js"></script>
+
+<!--控制器文件 -->
+<script src="js/controller/main.controller.js"></script>
+<script src="js/controller/user.controller.js"></script>
+<script src="js/controller/menu.controller.js"></script>
+<script src="js/controller/login.controller.js"></script>
+
+<!--接口层文件 -->
+<script src="js/service/user.service.js"></script>
+<script src="js/service/login.service.js"></script>
+
+
+</body>
+</html>

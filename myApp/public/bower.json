@@ -1,0 +1,26 @@
+{
+  "name": "myApp",
+  "description": "my app test",
+  "main": "",
+  "authors": [
+    "chen qiong"
+  ],
+  "directory":"public/bower_components",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.8",
+    "font-awesome": "~4.2.0",
+    "angular-ui-router": "~0.2.13",
+    "angular-bootstrap": "~0.12.1"
+  }
+}
