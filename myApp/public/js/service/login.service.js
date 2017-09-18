@@ -8,7 +8,6 @@
                 $http.get(url).then(
                     function success(respData) {
                         var message = respData.data;
-                        alert(message);
                         deferred.resolve(message);
                     },
                     function error(reason) {

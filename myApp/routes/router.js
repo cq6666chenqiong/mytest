@@ -1,10 +1,12 @@
 var user = require('../models/user.js');
 var express = require('express');
+var Promise = require('bluebird');
+var session = require('client-sessions');
+var mongoose = require('mongoose');
 var router = express.Router();
 
 router.use(function(req,resp,next){
     console.log("bas==="+__dirname);
-
     next();
 });
 

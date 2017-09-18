@@ -35,6 +35,14 @@
                 params: {
                     data: null
                 }
+            })
+            .state('first', {
+                url: '/first',
+                controller: 'FirstController',
+                templateUrl: '/view/first.html',
+                params: {
+                    data: null
+                }
             });
 
     });

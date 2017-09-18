@@ -1,8 +1,11 @@
 (function (app) {
     'use strict';
-    // loginService
-    app.controller('LoginController', function ($scope, $rootScope, $state, $stateParams,SessionStorage,loginService) {
+    app.controller('LoginController', function ($scope, $rootScope, $state,$stateParams,SessionStorage,loginService) {
         $rootScope.title = "用户登陆";
+        $scope.toFirst = function(){
+            SessionStorage.save('data','test');
+            $state.go('first',{data:'test'});
+        }
         $scope.login = function (user) {
             var promise = loginService.userLogin(user);
             promise.then(function(result){
